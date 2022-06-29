@@ -23,21 +23,21 @@ public class PersonResource {
     @Path("/")
     @Consumes(MediaType.APPLICATION_JSON)
     public Response getPerson() {
-        return Response.status(Response.Status.CREATED).entity(personRepository.listAll()).build();
+        return Response.status(Response.Status.OK).entity(personRepository.listAll()).build();
     }
 
     @GET
     @Path("/{id}")
     @Consumes(MediaType.APPLICATION_JSON)
     public Response getPersonById(@PathParam("id") Long id) {
-        return Response.status(Response.Status.CREATED).entity(personRepository.findById(id)).build();
+        return Response.status(Response.Status.OK).entity(personRepository.findById(id)).build();
     }
 
     @GET
     @Path("/searchByName/{name}")
     @Consumes(MediaType.APPLICATION_JSON)
     public Response getPersonByName(@PathParam("name") String name) {
-        return Response.status(Response.Status.CREATED).entity(personRepository.searchByNameLike(name)).build();
+        return Response.status(Response.Status.OK).entity(personRepository.findByNameLike(name)).build();
     }
 
     @POST
