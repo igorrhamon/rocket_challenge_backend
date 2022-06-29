@@ -1,13 +1,19 @@
 package org.challenge.model;
 
 
+import javax.persistence.Cacheable;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
 @Entity
-public class Person {
-    @Id @GeneratedValue private Long id;
+@Cacheable
+public class Person  {
+
+    @Id 
+    @GeneratedValue
+    private Long id;
+
     private String name;
     
 

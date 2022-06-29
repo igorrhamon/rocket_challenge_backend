@@ -13,7 +13,6 @@ import javax.ws.rs.core.Response;
 
 import org.challenge.model.Person;
 import org.challenge.repository.PersonRepository;
-import org.eclipse.microprofile.openapi.annotations.responses.APIResponse;
 
 @Path("/person")
 public class PersonResource {
@@ -24,7 +23,21 @@ public class PersonResource {
     @Path("/")
     @Consumes(MediaType.APPLICATION_JSON)
     public Response getPerson() {
-        return Response.status(Response.Status.CREATED).entity(personRepository.allPersons).build();
+        return Response.status(Response.Status.CREATED).entity(personRepository.listAll()).build();
+    }
+
+    @GET
+    @Path("/{id}")
+    @Consumes(MediaType.APPLICATION_JSON)
+    public Response getPersonById(@PathParam("id") Long id) {
+        return Response.status(Response.Status.CREATED).entity(personRepository.findById(id)).build();
+    }
+
+    @GET
+    @Path("/searchByName/{name}")
+    @Consumes(MediaType.APPLICATION_JSON)
+    public Response getPersonByName(@PathParam("name") String name) {
+        return Response.status(Response.Status.CREATED).entity(personRepository.searchByNameLike(name)).build();
     }
 
     @POST
