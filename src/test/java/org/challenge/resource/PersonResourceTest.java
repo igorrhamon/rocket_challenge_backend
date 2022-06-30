@@ -7,9 +7,12 @@ import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 
 import io.quarkus.test.junit.QuarkusTest;
+import io.restassured.RestAssured;
 
 @QuarkusTest
 public class PersonResourceTest {
+
+    
     
     @Test
     public void testGetPerson() {
@@ -28,6 +31,8 @@ public class PersonResourceTest {
     
     @Test
     public void testCreatePerson() {
+        
+
         given()
             .contentType(MediaType.APPLICATION_JSON)
             .body("{\"name\":\"John\",\"age\":30}")
