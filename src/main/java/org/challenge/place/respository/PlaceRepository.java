@@ -1,10 +1,10 @@
-package org.challenge.repository;
+package org.challenge.place.respository;
 
 import java.util.List;
 
 import javax.enterprise.context.ApplicationScoped;
 
-import org.challenge.model.Place;
+import org.challenge.place.model.Place;
 
 import io.quarkus.hibernate.orm.panache.PanacheRepository;
 

@@ -1,11 +1,10 @@
-package org.challenge.repository;
+package org.challenge.person.repository;
 
 import java.util.List;
 
 import javax.enterprise.context.ApplicationScoped;
 
-import org.challenge.model.Person;
-
+import org.challenge.person.model.Person;
 
 import io.quarkus.hibernate.orm.panache.PanacheRepository;
 

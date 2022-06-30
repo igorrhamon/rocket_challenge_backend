@@ -11,8 +11,8 @@ import javax.ws.rs.QueryParam;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 
-import org.challenge.model.Person;
-import org.challenge.repository.PersonRepository;
+import org.challenge.person.model.Person;
+import org.challenge.person.repository.PersonRepository;
 
 @Path("/person")
 public class PersonResource {

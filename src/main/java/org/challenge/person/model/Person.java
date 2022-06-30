@@ -1,4 +1,4 @@
-package org.challenge.model;
+package org.challenge.person.model;
 
 
 import javax.persistence.Cacheable;

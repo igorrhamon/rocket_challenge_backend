@@ -1,4 +1,4 @@
-package org.challenge.model;
+package org.challenge.place.model;
 
 import java.time.LocalDateTime;
 
