@@ -47,6 +47,7 @@
       </exclusions>
   </dependency> 
 
+
     <!-- Dependencia Oracle -->
     <dependency>
       <groupId>com.oracle.jdbc</groupId>
@@ -124,6 +125,10 @@
     <dependency>
         <groupId>io.quarkus</groupId>
         <artifactId>quarkus-hibernate-orm-panache</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.fasterxml.jackson.datatype</groupId>
+      <artifactId>jackson-datatype-jsr310</artifactId>
     </dependency>
 
     <!-- DEPENDENCIAS DE TESTE -->

@@ -28,10 +28,10 @@ public class Place {
     private String state;
 
     @CreationTimestamp
-    private LocalDateTime createdAt;
+    private java.time.LocalDateTime createdAt;
 
     @UpdateTimestamp
-    private LocalDateTime updatedAt;
+    private java.time.LocalDateTime updatedAt;
 
 
 
@@ -76,5 +76,10 @@ public class Place {
     }
     public void setId(Long id) {
         this.id = id;
+    }
+    @Override
+    public String toString() {
+        return "Place [city=" + city + ", createdAt=" + createdAt + ", id=" + id + ", name=" + name + ", slug=" + slug
+                + ", state=" + state + ", updatedAt=" + updatedAt + "]";
     }
 }

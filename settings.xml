@@ -1,0 +1,16 @@
+
+<settings xmlns="http://maven.apache.org/SETTINGS/1.0.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.0.0
+                  http://maven.apache.org/xsd/settings-1.0.0.xsd">
+<proxies>
+  <proxy>
+    <active>false</active>
+    <host>localhost</host>
+    <port>40080</port>
+    <username>f4352981</username>
+    <password>{PLI7XwGxBf8HegiPt5nAcLmQ+9vQi9fwU/p4Q6GFtV0=}</password>
+    <nonProxyHosts>localhost|127.*|*.localdomain.com|[::1]</nonProxyHosts>
+  </proxy>
+</proxies>
+</settings>

@@ -1,5 +1,7 @@
 package org.challenge.place.resource;
 
+import java.util.List;
+
 import javax.inject.Inject;
 import javax.transaction.Transactional;
 import javax.ws.rs.Consumes;
@@ -29,15 +31,16 @@ public class PlaceResource {
     @GET
     @Path("/slug/{slug}")
     @Consumes(MediaType.APPLICATION_JSON)
-    public Response getPlaceBySlug(@PathParam("slug") String slug) {
-        return Response.status(Response.Status.OK).entity(placeRepository.findBySlug(slug)).build();
+    public List<Place> getPlaceBySlug(@PathParam("slug") String slug) {
+        // return Response.status(Response.Status.OK).entity(placeRepository.findBySlug(slug)).build();
+        return placeRepository.findBySlug(slug);
     }
 
     @POST
     @Path("/")
     @Transactional
     @Consumes(MediaType.APPLICATION_JSON)
-    @Produces(MediaType.APPLICATION_JSON)
+    // @Produces(MediaType.APPLICATION_JSON)
     public Response createPlace(@QueryParam("slug") String slug, @QueryParam("name") String name, @QueryParam("city") String city, @QueryParam("state") String state) {
         Place place = new Place();
         // if(slug == null || name == null || city == null || state == null)
@@ -48,6 +51,7 @@ public class PlaceResource {
         place.setState(state);
         placeRepository.persist(place);
         return Response.status(Response.Status.CREATED).entity(place).build();
+        // return place;
     }
 
     @GET
